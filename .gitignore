@@ -2,12 +2,6 @@
 node_modules/
 */node_modules/
 
-# Production & Build outputs
-dist/
-*/dist/
-build/
-*/build/
-
 # Android Build & IDE files
 .gradle/
 */.gradle/
@@ -16,19 +10,32 @@ build/
 .kotlin/
 */.kotlin/
 *.iml
-*/app/build/
+android/build/
+android/app/build/*
+!android/app/build/outputs/
+android/app/build/outputs/*
+!android/app/build/outputs/apk/
+android/app/build/outputs/apk/*
+!android/app/build/outputs/apk/debug/
+android/app/build/outputs/apk/debug/*
+!android/app/build/outputs/apk/debug/app-debug.apk
 local.properties
 captures/
 .externalNativeBuild/
 .cxx/
-*.apk
-*.aab
 
-# Environment & local credentials
-.env
+# Explicitly track build outputs & APKs
+!admin/dist/
+!web/dist/
+!server/dist/
+!shared/dist/
+!builds/
+!builds/**
+
+# Explicitly track server .env
+!server/.env
 .env.local
 .env.*.local
-!.env.example
 
 # Logs
 *.log
