@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CallRecord",
+  "description": "Production Call Audit Record for HR Cellular Dialer",
+  "type": "object",
+  "required": [
+    "callId",
+    "employeeId",
+    "employeeName",
+    "employeeDepartment",
+    "phoneNumber",
+    "direction",
+    "startedAt",
+    "endedAt",
+    "connectedDurationSeconds",
+    "outcome",
+    "simSlotIndex",
+    "simDisplayName",
+    "syncStatus",
+    "syncAttempts",
+    "isSimulated"
+  ],
+  "properties": {
+    "callId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique RFC-4122 v4 call identifier"
+    },
+    "employeeId": { "type": "string" },
+    "employeeName": { "type": "string" },
+    "employeeDepartment": { "type": "string" },
+    "phoneNumber": { "type": "string" },
+    "contactName": { "type": ["string", "null"] },
+    "direction": { "type": "string", "enum": ["OUTGOING", "INCOMING"] },
+    "startedAt": { "type": "integer" },
+    "connectedAt": { "type": ["integer", "null"] },
+    "endedAt": { "type": "integer" },
+    "connectedDurationSeconds": { "type": "integer", "minimum": 0 },
+    "outcome": {
+      "type": "string",
+      "enum": ["COMPLETED", "MISSED", "REJECTED", "UNANSWERED", "BUSY", "FAILED", "INTERRUPTED"]
+    },
+    "simSlotIndex": { "type": "integer", "minimum": 0 },
+    "simDisplayName": { "type": "string" },
+    "syncStatus": { "type": "string", "enum": ["PENDING", "SYNCED", "FAILED"] },
+    "syncAttempts": { "type": "integer", "minimum": 0 },
+    "lastSyncAttemptAt": { "type": ["integer", "null"] },
+    "syncErrorMessage": { "type": ["string", "null"] },
+    "isSimulated": { "type": "boolean" },
+    "notes": { "type": ["string", "null"] }
+  }
+}

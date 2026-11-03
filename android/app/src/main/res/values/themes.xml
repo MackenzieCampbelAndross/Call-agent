@@ -1,0 +1,24 @@
+<resources>
+    <style name="Theme.HrCellularDialer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorPrimaryVariant">@color/brand_primary_dark</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="android:statusBarColor">@color/brand_background</item>
+        <item name="android:windowBackground">@color/brand_background</item>
+    </style>
+
+    <!-- Specific Clean White Theme for Login Flow Matching the Design Reference -->
+    <style name="Theme.HrCellularDialer.Login" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/login_purple_accent</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="Theme.HrCellularDialer.InCall" parent="Theme.HrCellularDialer">
+        <item name="android:statusBarColor">@color/brand_background</item>
+        <item name="android:navigationBarColor">@color/brand_background</item>
+    </style>
+</resources>

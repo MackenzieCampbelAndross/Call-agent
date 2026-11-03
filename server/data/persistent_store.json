@@ -1,0 +1,425 @@
+{
+  "admins": [
+    {
+      "id": "admin-root-01",
+      "name": "Executive Administrator",
+      "email": "admin@purpledrive.com",
+      "role": "SUPER_ADMIN",
+      "passwordHash": "$2b$10$jZNBtfB/D6Fj3TkIDNsaS.4DjJK0IcV5Lq8pThz5X8EC2djtFP3GO",
+      "createdAt": "2026-10-28T14:14:54.527Z",
+      "updatedAt": "2026-10-28T14:14:54.527Z"
+    },
+    {
+      "id": "admin-root-02",
+      "name": "Administrator",
+      "email": "admin@purpledrive.internal",
+      "role": "SUPER_ADMIN",
+      "passwordHash": "$2b$10$jZNBtfB/D6Fj3TkIDNsaS.4DjJK0IcV5Lq8pThz5X8EC2djtFP3GO",
+      "createdAt": "2026-10-28T14:14:54.527Z",
+      "updatedAt": "2026-10-28T14:14:54.527Z"
+    }
+  ],
+  "employees": [
+    {
+      "id": "EMP-TEST",
+      "name": "Test User",
+      "email": "test@gmail.com",
+      "department": "Quality Assurance",
+      "employeeCode": "HR-TEST-001",
+      "registeredPhoneNumber": "+14155550100",
+      "status": "ACTIVE",
+      "passwordHash": "$2b$10$v09duzImWI/HkBCx4gY5CeaHN6FCZyxZfF1POWY6TiPtPtCTeBf5C",
+      "createdAt": "2026-10-28T14:14:54.527Z",
+      "updatedAt": "2026-10-28T14:14:54.527Z"
+    },
+    {
+      "id": "EMP-9901",
+      "name": "Rohan Sharma",
+      "email": "rohan.sharma@purpledrive.com",
+      "department": "Talent Acquisition",
+      "employeeCode": "HR-9901",
+      "registeredPhoneNumber": "+14155559901",
+      "status": "ACTIVE",
+      "passwordHash": "",
+      "createdAt": "2026-10-29T14:42:11.754Z",
+      "updatedAt": "2026-10-29T14:42:11.754Z"
+    },
+    {
+      "id": "EMP-9901",
+      "name": "Rohan Sharma",
+      "email": "rohan.sharma@purpledrive.com",
+      "department": "Talent Acquisition",
+      "employeeCode": "HR-9901",
+      "registeredPhoneNumber": "+14155559901",
+      "status": "ACTIVE",
+      "passwordHash": "",
+      "createdAt": "2026-10-29T14:48:53.361Z",
+      "updatedAt": "2026-10-29T14:48:53.361Z"
+    },
+    {
+      "id": "EMP-9901",
+      "name": "Rohan Sharma",
+      "email": "rohan.sharma@purpledrive.com",
+      "department": "Talent Acquisition",
+      "employeeCode": "HR-9901",
+      "registeredPhoneNumber": "+14155559901",
+      "status": "ACTIVE",
+      "passwordHash": "",
+      "createdAt": "2026-10-30T13:53:14.396Z",
+      "updatedAt": "2026-10-30T13:53:14.396Z"
+    }
+  ],
+  "callRecords": [],
+  "auditLogs": [
+    {
+      "timestamp": 1793368356801,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793368356802-ki1eo",
+      "createdAt": "2026-10-30T13:52:36.802Z"
+    },
+    {
+      "timestamp": 1793368342730,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793368342730-b8hsl",
+      "createdAt": "2026-10-30T13:52:22.730Z"
+    },
+    {
+      "timestamp": 1793368032912,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793368032912-krktz",
+      "createdAt": "2026-10-30T13:47:12.912Z"
+    },
+    {
+      "timestamp": 1793367990702,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793367990702-f75j5",
+      "createdAt": "2026-10-30T13:46:30.702Z"
+    },
+    {
+      "timestamp": 1793367604062,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793367604062-wi36l",
+      "createdAt": "2026-10-30T13:40:04.062Z"
+    },
+    {
+      "timestamp": 1793367601108,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793367601108-b89ji",
+      "createdAt": "2026-10-30T13:40:01.108Z"
+    },
+    {
+      "timestamp": 1793367341729,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793367341729-kzk9j",
+      "createdAt": "2026-10-30T13:35:41.729Z"
+    },
+    {
+      "timestamp": 1793367337743,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793367337743-0sugl",
+      "createdAt": "2026-10-30T13:35:37.743Z"
+    },
+    {
+      "timestamp": 1793366958541,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366958541-3ilwm",
+      "createdAt": "2026-10-30T13:29:18.541Z"
+    },
+    {
+      "timestamp": 1793366894592,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366894592-7yqgy",
+      "createdAt": "2026-10-30T13:28:14.592Z"
+    },
+    {
+      "timestamp": 1793366795823,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795823-y6pdg",
+      "createdAt": "2026-10-30T13:26:35.823Z"
+    },
+    {
+      "timestamp": 1793366795818,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795818-w820a",
+      "createdAt": "2026-10-30T13:26:35.818Z"
+    },
+    {
+      "timestamp": 1793366795814,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795814-fia1b",
+      "createdAt": "2026-10-30T13:26:35.814Z"
+    },
+    {
+      "timestamp": 1793366795810,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795810-gdb81",
+      "createdAt": "2026-10-30T13:26:35.810Z"
+    },
+    {
+      "timestamp": 1793366795806,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795806-a7mo9",
+      "createdAt": "2026-10-30T13:26:35.806Z"
+    },
+    {
+      "timestamp": 1793366795797,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795797-22zsc",
+      "createdAt": "2026-10-30T13:26:35.797Z"
+    },
+    {
+      "timestamp": 1793366795792,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795792-7sskz",
+      "createdAt": "2026-10-30T13:26:35.792Z"
+    },
+    {
+      "timestamp": 1793366795271,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366795271-oedu0",
+      "createdAt": "2026-10-30T13:26:35.271Z"
+    },
+    {
+      "timestamp": 1793366453318,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366453318-cwb2p",
+      "createdAt": "2026-10-30T13:20:53.318Z"
+    },
+    {
+      "timestamp": 1793366449901,
+      "actorId": "test@gmail.com",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "OTP_REQUESTED",
+      "details": {
+        "email": "test@gmail.com",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793366449901-plft8",
+      "createdAt": "2026-10-30T13:20:49.902Z"
+    },
+    {
+      "timestamp": 1793365393704,
+      "actorId": "EMP-TEST",
+      "actorType": "EMPLOYEE",
+      "action": "CALLS_SYNCHRONIZED",
+      "details": {
+        "count": 1,
+        "callIds": [
+          "da44a8ee-c39c-4bd2-ba56-f723fb936983"
+        ]
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793365393705-zj6nu",
+      "createdAt": "2026-10-30T13:03:13.705Z"
+    },
+    {
+      "timestamp": 1793364425711,
+      "actorId": "EMP-TEST",
+      "actorType": "EMPLOYEE",
+      "action": "CALLS_SYNCHRONIZED",
+      "details": {
+        "count": 1,
+        "callIds": [
+          "c9db49f1-8bd6-4679-a9c7-93c879876ac2"
+        ]
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793364425711-y91pu",
+      "createdAt": "2026-10-30T12:47:05.711Z"
+    },
+    {
+      "timestamp": 1793364391410,
+      "actorId": "EMP-TEST",
+      "actorEmail": "test@gmail.com",
+      "actorType": "EMPLOYEE",
+      "action": "EMPLOYEE_OTP_LOGIN_SUCCESS",
+      "details": {
+        "email": "test@gmail.com",
+        "registeredPhone": "+14155550100",
+        "ip": "::ffff:127.0.0.1"
+      },
+      "ipAddress": "::ffff:127.0.0.1",
+      "id": "audit-1793364391410-57nfl",
+      "createdAt": "2026-10-30T12:46:31.410Z"
+    },
+    {
+      "id": "audit-seed-01",
+      "timestamp": 1793197776620,
+      "actorId": "system",
+      "actorEmail": "system@purpledrive.com",
+      "actorType": "SYSTEM",
+      "action": "STORE_INITIALIZED",
+      "details": {
+        "message": "Database initialized with default administrator and test employee account"
+      },
+      "createdAt": "2026-10-28T14:14:54.527Z"
+    }
+  ]
+}

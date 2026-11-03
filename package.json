@@ -1,0 +1,25 @@
+{
+  "name": "hr-cellular-dialer-suite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production Android Cellular Dialer with Browser Testing Mode for HR Teams",
+  "workspaces": [
+    "shared",
+    "server",
+    "web",
+    "admin"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"server,web,admin\" -c \"blue,green,magenta\" \"npm run dev:server\" \"npm run dev:web\" \"npm run dev:admin\"",
+    "dev:server": "npm --workspace=server run dev",
+    "dev:web": "npm --workspace=web run dev",
+    "dev:admin": "npm --workspace=admin run dev",
+    "build": "npm --workspace=shared run build && npm --workspace=web run build && npm --workspace=admin run build && npm --workspace=server run build",
+    "test": "npm --workspace=shared run test && npm --workspace=server run test && npm --workspace=web run test",
+    "test:android": "powershell -ExecutionPolicy Bypass -Command \"$env:JAVA_HOME = 'C:\\Program Files\\Android\\Android Studio\\jbr'; cd android; .\\gradlew.bat testDebugUnitTest\"",
+    "build:android": "powershell -ExecutionPolicy Bypass -Command \"$env:JAVA_HOME = 'C:\\Program Files\\Android\\Android Studio\\jbr'; cd android; .\\gradlew.bat assembleDebug\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

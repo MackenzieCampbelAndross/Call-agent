@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PurpleDrive HR Dialer</string>
+    <string name="default_dialer_prompt">Set PurpleDrive as your default phone app to manage cellular calls</string>
+    <string name="set_as_default">Set as Default</string>
+    <string name="incoming_call">Incoming Cellular Call</string>
+    <string name="outgoing_call">Calling…</string>
+    <string name="call_connected">Cellular Call Active</string>
+    <string name="call_ended">Call Ended</string>
+    <string name="select_sim_title">Select SIM Card</string>
+    <string name="tab_recents">Recents</string>
+    <string name="tab_dialpad">Keypad</string>
+    <string name="tab_contacts">Contacts</string>
+</resources>

@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production & Build outputs
+dist/
+*/dist/
+build/
+*/build/
+
+# Android Build & IDE files
+.gradle/
+*/.gradle/
+.idea/
+*/.idea/
+.kotlin/
+*/.kotlin/
+*.iml
+*/app/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# Environment & local credentials
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System & OS metadata
+.DS_Store
+Thumbs.db

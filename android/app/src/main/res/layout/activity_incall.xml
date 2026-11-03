@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="28dp"
+    android:paddingTop="56dp"
+    android:paddingEnd="28dp"
+    android:paddingBottom="48dp">
+
+    <!-- Active SIM Identifier Pill -->
+    <TextView
+        android:id="@+id/tvInCallSimBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search_input"
+        android:paddingStart="14dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="6dp"
+        android:text="SIM 1 (Cellular)"
+        android:textColor="@color/accent_purple"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Caller Name or Large Phone Number -->
+    <TextView
+        android:id="@+id/tvInCallName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Cellular Call"
+        android:textColor="@color/text_primary"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvInCallNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="+1 (415) 555-0199"
+        android:textColor="@color/text_muted"
+        android:textSize="18sp" />
+
+    <!-- Live Status / Duration -->
+    <TextView
+        android:id="@+id/tvInCallStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Connecting…"
+        android:textColor="@color/text_muted"
+        android:textSize="15sp" />
+
+    <Chronometer
+        android:id="@+id/chronoCallTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- In-Call 2x1 Apple-Styled Control Grid (Mute, Speaker) -->
+    <LinearLayout
+        android:id="@+id/layoutOngoingControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="44dp"
+        android:visibility="gone">
+
+        <!-- Mute Button -->
+        <LinearLayout
+            android:id="@+id/btnMute"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/bg_keypad_circle"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMuteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mute"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Speakerphone Button -->
+        <LinearLayout
+            android:id="@+id/btnSpeaker"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="32dp"
+            android:background="@drawable/bg_keypad_circle"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSpeakerIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speaker"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Incoming Call Action Controls (Decline / Answer) -->
+    <LinearLayout
+        android:id="@+id/layoutIncomingActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="36dp"
+        android:visibility="gone">
+
+        <!-- Decline Call (Red) -->
+        <FrameLayout
+            android:id="@+id/fabDecline"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="56dp"
+            android:background="@drawable/bg_call_button"
+            android:backgroundTint="@color/call_red"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_phone_filled"
+                android:rotation="135" />
+        </FrameLayout>
+
+        <!-- Answer Call (Green) -->
+        <FrameLayout
+            android:id="@+id/fabAnswer"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="56dp"
+            android:background="@drawable/bg_call_button"
+            android:backgroundTint="@color/call_green"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_phone_filled" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Outgoing / Ongoing Hangup Button (Red) -->
+    <FrameLayout
+        android:id="@+id/fabHangup"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_call_button"
+        android:backgroundTint="@color/call_red"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_phone_filled"
+            android:rotation="135" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loginRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg">
+
+    <!-- Top Right Decorative Vector Curve -->
+    <ImageView
+        android:id="@+id/ivTopCurve"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="top|end"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_top_curves" />
+
+    <!-- Bottom Decorative Vector Curve -->
+    <ImageView
+        android:id="@+id/ivBottomCurve"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_bottom_curves" />
+
+    <!-- Safe Content Container (System Insets applied dynamically) -->
+    <FrameLayout
+        android:id="@+id/loginContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ================================================================= -->
+        <!-- SCREEN 1: SIGN IN (EMAIL ENTRY)                                  -->
+        <!-- ================================================================= -->
+        <ScrollView
+            android:id="@+id/layoutScreen1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="28dp"
+                android:paddingTop="36dp"
+                android:paddingEnd="28dp"
+                android:paddingBottom="24dp">
+
+                <!-- Heading: "Sign in \n to continue" -->
+                <TextView
+                    android:id="@+id/tvSignTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Sign in\nto continue"
+                    android:textColor="@color/login_text_heading"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <!-- Supporting copy -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="4dp"
+                    android:maxWidth="280dp"
+                    android:text="Access your work dialer, track calls and stay productive."
+                    android:textColor="@color/login_text_sub"
+                    android:textSize="15sp" />
+
+                <!-- Error Banner -->
+                <TextView
+                    android:id="@+id/tvErrorScreen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_login_input_card"
+                    android:padding="10dp"
+                    android:textColor="@color/login_error"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <!-- Corporate Email Input Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/bg_login_input_card"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_mail_outline" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Corporate Email"
+                            android:textColor="@color/login_text_sub"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/etCorporateEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:background="@null"
+                            android:hint="test@gmail.com"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:text="test@gmail.com"
+                            android:textColor="@color/login_text_heading"
+                            android:textColorHint="@color/login_text_sub"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- CTA: "Request OTP Code ->" -->
+                <FrameLayout
+                    android:id="@+id/btnRequestOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_login_btn_black"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Request OTP Code"
+                            android:textColor="@color/login_btn_text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="12dp"
+                            android:src="@drawable/ic_arrow_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <!-- Access restriction note -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_lock_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Only @purpledrive.com accounts are allowed to access this application."
+                        android:textColor="@color/login_text_sub"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Dev test helper note (hidden to match pure spec UI) -->
+                <TextView
+                    android:id="@+id/tvFastFillTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Test account: test@gmail.com (OTP: 123456)"
+                    android:textColor="@color/login_purple_accent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ================================================================= -->
+        <!-- SCREEN 2: OTP VERIFICATION                                        -->
+        <!-- ================================================================= -->
+        <ScrollView
+            android:id="@+id/layoutScreen2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="28dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="28dp"
+                android:paddingBottom="24dp">
+
+                <!-- Circular Back Arrow Button -->
+                <FrameLayout
+                    android:id="@+id/btnBackToEmail"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_circle_back_btn"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_back_arrow" />
+                </FrameLayout>
+
+                <!-- Heading: "Enter the \n 6-digit code" -->
+                <TextView
+                    android:id="@+id/tvOtpTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="sans-serif-black"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Enter the\n6-digit code"
+                    android:textColor="@color/login_text_heading"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <!-- Subtitle showing destination email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="We've sent a code to"
+                    android:textColor="@color/login_text_sub"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvRecipientEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="test@gmail.com"
+                    android:textColor="@color/login_text_heading"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Error Banner -->
+                <TextView
+                    android:id="@+id/tvErrorScreen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_login_input_card"
+                    android:padding="10dp"
+                    android:textColor="@color/login_error"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <!-- 6 Evenly Spaced OTP Input Cells -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="26dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/otpCell1"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_otp_cell"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="1"
+                        android:textColor="@color/login_text_heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/otpCell2"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_otp_cell"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="2"
+                        android:textColor="@color/login_text_heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/otpCell3"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_otp_cell"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="3"
+                        android:textColor="@color/login_text_heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/otpCell4"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_otp_cell"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="4"
+                        android:textColor="@color/login_text_heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/otpCell5"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/bg_otp_cell"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="5"
+                        android:textColor="@color/login_text_heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/otpCell6"
+                        android:layout_width="46dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_otp_cell"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:text="6"
+                        android:textColor="@color/login_text_heading"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Resend Countdown -->
+                <TextView
+                    android:id="@+id/tvResendPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Didn't receive the code? Resend in 00:24"
+                    android:textColor="@color/login_text_sub"
+                    android:textSize="13sp" />
+
+                <!-- CTA: "Verify & Continue ->" -->
+                <FrameLayout
+                    android:id="@+id/btnVerifyOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/bg_login_btn_black"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Verify &amp; Continue"
+                            android:textColor="@color/login_btn_text"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="12dp"
+                            android:src="@drawable/ic_arrow_right" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <!-- Minimal divider: "or" -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/login_divider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="or"
+                        android:textColor="@color/login_text_sub"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/login_divider" />
+                </LinearLayout>
+
+                <!-- Action: "Use a different email" -->
+                <TextView
+                    android:id="@+id/btnUseDifferentEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:text="Use a different email"
+                    android:textColor="@color/login_purple_accent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ================================================================= -->
+        <!-- SCREEN 3: VERIFYING STATE                                         -->
+        <!-- ================================================================= -->
+        <LinearLayout
+            android:id="@+id/layoutScreen3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:visibility="gone">
+
+            <!-- Centered Translucent Purple Abstract Orb -->
+            <ImageView
+                android:id="@+id/ivVerifyingOrb"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_verifying_orb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Verifying your account"
+                android:textColor="@color/login_text_heading"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Please wait while we secure\nyour session."
+                android:textColor="@color/login_text_sub"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

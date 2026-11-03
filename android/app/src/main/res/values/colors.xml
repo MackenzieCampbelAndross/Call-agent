@@ -1,0 +1,44 @@
+<resources>
+    <!-- Light PurpleDrive Theme Colors (Matches Reference Specification) -->
+    <color name="login_bg">#FFFFFF</color>
+    <color name="login_text_heading">#111116</color>
+    <color name="login_text_sub">#757582</color>
+    <color name="login_purple_accent">#6E2AF5</color>
+    <color name="login_lavender_bg">#F4F0FF</color>
+    <color name="login_lavender_border">#D6C6FB</color>
+    <color name="login_btn_black">#0F0F14</color>
+    <color name="login_btn_text">#FFFFFF</color>
+    <color name="login_otp_cell_bg">#F3EFFD</color>
+    <color name="login_otp_focused_stroke">#6E2AF5</color>
+    <color name="login_divider">#E1DDE8</color>
+    <color name="login_error">#E53935</color>
+
+    <!-- Apple Minimal Dark Theme Colors (Main Dialer App) -->
+    <color name="bg_primary">#050505</color>
+    <color name="bg_secondary">#17171C</color>
+    <color name="bg_button_pressed">#24242B</color>
+    
+    <color name="text_primary">#F5F5F7</color>
+    <color name="text_muted">#92929D</color>
+    <color name="text_subtle">#63636E</color>
+
+    <color name="accent_purple">#8250F6</color>
+    <color name="accent_purple_dark">#6B38E0</color>
+    <color name="accent_purple_soft">#221738</color>
+
+    <color name="separator">#292930</color>
+    <color name="separator_subtle">#1C1C22</color>
+
+    <color name="call_green">#34C759</color>
+    <color name="call_red">#FF3B30</color>
+    <color name="call_missed">#FF453A</color>
+
+    <!-- Legacy compatibility mapped to new palette -->
+    <color name="brand_primary">#8250F6</color>
+    <color name="brand_primary_dark">#6B38E0</color>
+    <color name="brand_secondary">#8250F6</color>
+    <color name="brand_background">#050505</color>
+    <color name="surface_dark">#17171C</color>
+    <color name="surface_card">#17171C</color>
+    <color name="sync_amber">#FF9F0A</color>
+</resources>
